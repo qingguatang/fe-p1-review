@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!--
+    总体来说做得非常不错，主动使用了没有教到过的CSS样式，比如阴影和文本缩进。
+    
+    以下是一些改进的点：
+
     1. 一般来说，现在的公司，前端的代码HTML/CSS/JS都是使用2个空格缩进的，
     你可以在编辑器中设置 "editor.tabSize": 2, 这样和主流的保持一致。
 
@@ -26,6 +30,7 @@
         font-size: 20px;
     }
     h2{
+        /* 默认的对齐方式就是左对齐，所以可以不用写，让代码更精简 */
         text-align: left;
         font-size: 30px;/*字体大小*/
     }
@@ -44,8 +49,10 @@
     }
     p{
         line-height: 1.5;
+        /* 默认的对齐方式就是左对齐，所以可以不用写，让代码更加精简 */
         text-align: left;
-        font-family:cursive;
+        /* 保持格式的一致性，包括空格 */
+        font-family: cursive;
         font-size: 20px;
         /*word-break: break-all;/*断行*/
         width: 40em;/*每排最长有40个字符*/
