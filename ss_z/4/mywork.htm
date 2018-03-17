@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>123</title>
+
+    <!-- 因为你自由发挥的程度比较大，所以我不清楚你最终把页面想做成什么样子，因此就针对你写得代码给建议，
+    一般来说，在练习阶段，最好严格还原视觉搞和要做的网页，有个清晰的目标，这样才能够把基础打得扎实。 -->
+
     <style>
     body,ul,li{
+        /* 这里的reset没问题 */
         margin: 0;
         padding: 0;
+
+        /* 在这里一般不会设置字体大小，可以使用类选择器，选择需要设置的字体大小的地方设置 */
         font-size: 19px;
     }
     ul{
         list-style: none;
+        /* 具体元素的样式，使用类选择器单独对元素设置，而不会统一加在所有元素上 */
         margin: 40px;
-    }
     }
     body{
         margin: 30px;
@@ -26,6 +33,7 @@
     .main-nav li a{
         color:white;
         text-decoration: none;
+        /* 以下样式，在flex布局时才用到，在这里无效，我们只写必要的代码 */
         align-self: center;
     }
     .main-nav li a:hover{
@@ -54,12 +62,18 @@
         background-image: none;
         border-color: rgb(79, 111, 201);
     }
+
+    /* 下面这段语句，意图不明，我们应该对所有写的代码（包括copy的代码），都要弄清楚它的作用，
+     要分清楚： 1. 懂得原理 2. 懂得起什么作用 两者的区别。
+      可以在不知道原理的前题下用（而且我们经常这样），但是一定要知道起什么作用。
+     */
     button:after{
         color: rgb(94, 184, 219);
         background-color: transparent;
         background-image: none;
         border-color: rgb(94, 184, 219);
         box-sizing: border-box;
+    }
     </style>
 </head>
 <body>
@@ -96,9 +110,14 @@
                <a href="https://mst.vip.com/S9-wJAUk_lfJLiW1K7uoWg.php?client=vipcms&wapid=mst_1775181&extra_type=1">生    活</a>
            </li>
        </ul>
+
+       <!-- figure标签的使用不对，你看文档：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure
+       所有的示例都是有张图，或者有段文字，再对图或文本有句小描述（很多文章里面的图下面都有一个描述的）这种场景可以使用<figure>
+       这个题目的目的是让你对标签的正确使用有个了解， 就相当于链接用a, 图片用img， 标题用 h1...h6 -->
        <figure>
        <ul class="button">
             <button type="button" class="btn 1">连衣裙</button>
+            <!-- 这里需要注意，就是打了多个空格，只会显示出一个空格，而且宽度不可控，这一部分见第5课内容 -->
             <button type="button" class="btn 2">衬  衫</button>
             <button type="button" class="btn 3">外  套</button>
             <button type="button" class="btn 4">休闲裤</button>
@@ -107,7 +126,7 @@
             <button type="button" class="btn 7">针织衫</button>
             <button type="button" class="btn 8">套  装</button>
        </ul>
-    </figure>
+       </figure>
    </header> 
 </body>
 </html>
