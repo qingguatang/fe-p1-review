@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>0315作业</title>
+	<style type="text/css">
+		/* button有border和padding的预定义样式，这里单独清楚这些样式 */	
+		button{
+			border:none;
+			padding: 0;
+			width: 90px;
+			height: 45px;
+			color:#fff;
+			border-radius: 20px;
+			font-size: 20px;
+			outline: none;
+		}
+		button:nth-child(1){
+			background-color: #007bff;
+		}
+		button:nth-child(1):hover{
+			background: #0670e2;
+		}
+		button:nth-child(1):focus{
+			border:4px solid #62acfb;
+		}
+		button:nth-child(2){
+			background-color: #6c757d;
+		}
+		button:nth-child(2):hover{
+			background: #596168;
+		}
+		button:nth-child(2):focus{
+			border:4px solid #acbac6;
+		}
+		button:nth-child(3){
+			background-color: #28a745;
+		}
+		button:nth-child(3):hover{
+			background: #1f8f39;
+		}
+		button:nth-child(3):focus{
+			border:4px solid #5bef7d;
+		}
+		button:nth-child(4){
+			background-color: #dc3545;
+		}
+		button:nth-child(4):hover{
+			background: #c12b3a;
+		}
+		button:nth-child(4):focus{
+			border:4px solid #f8707d;
+		}
+		button:nth-child(5){
+			background-color: #ffc107;
+		}
+		button:nth-child(5):hover{
+			background: #dca707;
+		}
+		button:nth-child(5):focus{
+			border:4px solid #fad460;
+		}
+		button:nth-child(6){
+			background-color: #17a2b8;
+		}
+		button:nth-child(6):hover{
+			background: #148ea1;
+		}
+		button:nth-child(6):focus{
+			border:4px solid #23d7f3;
+		}
+		li{
+			list-style: none;
+			display: table-cell;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+		.nav1{
+			color: #d5d5d5;
+			background-color: #545652;
+			width: 610px;
+		}
+		.nav2{
+			color: #072;
+			background-color: #edf4ed;
+			width: 610px;
+		}
+		.nav1 li:hover{
+			color: #fff;
+		}
+		.nav2 li:hover{
+			background-color: #072;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<!-- 按钮效果 -->
+	<!-- 根据观察，鼠标移上的时候，颜色变深，按下的时候按钮的颜色变深，并且有一个外边框 -->
+	<div>
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>按钮4</button>
+		<button>按钮5</button>
+		<button>按钮6</button>
+	</div>
+	<ul class="nav1">
+		<li>豆瓣</li>
+		<li>读书</li>
+		<li>电影</li>
+		<li>音乐</li>
+		<li>同城</li>
+		<li>小组</li>
+		<li>阅读</li>
+		<li>FM</li>
+		<li>时间</li>
+		<li>市集</li>
+		<li>更多</li>
+	</ul>
+	<ul class="nav2">
+		<li>首页</li>
+		<li>我的豆瓣</li>
+		<li>浏览发现</li>
+		<li>话题广场</li>
+	</ul>
+</body>
+</html>
