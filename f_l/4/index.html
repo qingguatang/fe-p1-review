@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>0315作业</title>
 	<style type="text/css">
+		/* 按扭效果的实现没有问题， 可以尝试把button改成class选择器，比如.btn，
+		一般来说全局标签的选择器只做cssreset用，而且也只设必要的。 */
+
 		/* button有border和padding的预定义样式，这里单独清楚这些样式 */	
 		button{
 			border:none;
@@ -69,8 +72,18 @@
 		button:nth-child(6):focus{
 			border:4px solid #23d7f3;
 		}
+
+
+		/*
+		一般来说，我们只会在标签上设置css reset的内容，
+		在我们学习了class选择器和复合选择器后，具体的样式只会作用在具体的元素上
+		所以 像下面的display, padding, cursor 我们就写在要用到的地方
+		*/
+
 		li{
 			list-style: none;
+			/* 自学了table-cell的方式来布局，挺好的。
+			后面学了float布局时可以再尝试下使用float布局来做这个导航条 */
 			display: table-cell;
 			padding: 5px 10px;
 			cursor: pointer;
