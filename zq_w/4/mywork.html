@@ -96,16 +96,27 @@
 			background-color: #218838;
 			color: #ffffff;
 		}
+
+		.btn:focus {
+			/* 去掉focus有个讨厌的蓝边框 */
+			outline: none;
+		}
+		/* 下面这一段就可以在focus加上阴影 */
+		.first-button:focus {
+			box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5)
+		}
 	</style>
 </head>
 <body>
 	<ul>
-		<li><button class="first-button">Primary</button></li>
-		<li><button class="second-button">Secondary</button></li>
-		<li><button class="third-button">Seccess</button></li>
-		<li><button class="fouth-button">Danger</button></li>
-		<li><button class="fifth-button">Worning</button></li>
-		<li><button class="sixth-button">Info</button></li>
+		<!-- 我们可以在一个元素上加多个classs名称，这样就可以把一些公共的样式写在一起了
+			比如下例，我加了个btn,这样就可以对这一组按扭统一设置样式了-->
+		<li><button class="btn first-button">Primary</button></li>
+		<li><button class="btn second-button">Secondary</button></li>
+		<li><button class="btn third-button">Seccess</button></li>
+		<li><button class="btn fouth-button">Danger</button></li>
+		<li><button class="btn fifth-button">Worning</button></li>
+		<li><button class="btn sixth-button">Info</button></li>
 	</ul>
 
 	<ul class="myline">
@@ -122,6 +133,9 @@
 		<li><a href="#">更多</a></li>
 	</ul>
 
+	<!-- figure标签的使用不对，你看文档：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure
+	所有的示例都是有张图，或者有段文字，再对图或文本有句小描述（很多文章里面的图下面都有一个描述的）这种场景可以使用<figure>
+	这个题目的目的是让你对标签的正确使用有个了解， 就相当于链接用a, 图片用img， 标题用 h1...h6-->
 	<figure>
 		<ul>
 			<li><a href="#">首页</a></li>
