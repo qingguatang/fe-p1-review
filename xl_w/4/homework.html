@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+
+    /* 我们对代码的格式（缩进、空格等）非常重视
+    我尝试对下面这一段重新排了下，你也需要对其他的CSS样式重新排版下。 */
+
     .btn-a {
-            color: #fff;
-            background-color: #007bff;
-            border-color: #007bff;
-        }
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
 
     .btn-a:active {
         color: #fff;
@@ -147,17 +151,44 @@
                     box-shadow: 0 0 0 0.2rem rgba(23,162,184,.5);
                 }
 
+    /* 总体来说做得非常不错了，我们可以小优化下 */
+    .btn {
+        /* 内边距, 上下为6， 左右为12 */
+        padding: 6px 12px;
+
+        /* 也可以分开写，就是小麻烦点 */
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        /* 最后，四个方向也可以合在一条上写 */
+        /* 方向依次为 上 右 下 左， 你可以想像为，从上面开始，顺着转一圈 */
+        padding: 6px 12px 6px 12px;
+
+        /* 圆角 */
+        border-radius: 4px;
+
+        /* 一般来说，按扭可以加个hover移上去的手势，像链接一下
+        你可以Chrome中去掉，以查看效果差异 */
+        cursor: pointer;
+    }
+
+    /* focus的时候，需要去掉外面讨厌的蓝色 */
+    .btn:focus {
+        outline: none;
     }
     </style>
 </head>
 <body>
+    <!-- 我们可以在一个元素上加多个classs名称，这样就可以把一些公共的样式写在一起了 -->
     <ul>
-        <button class="btn-a">Primary</button>
-        <button class="btn-b">Secondary</button>
-        <button class="btn-c">Success</button>
-        <button class="btn-d">Danger</button>
-        <button class="btn-e">Worning</button>
-        <button class="btn-f">Info</button>
+        <button class="btn btn-a">Primary</button>
+        <button class="btn btn-b">Secondary</button>
+        <button class="btn btn-c">Success</button>
+        <button class="btn btn-d">Danger</button>
+        <button class="btn btn-e">Worning</button>
+        <button class="btn btn-f">Info</button>
     </ul>
 </body>
 </html>
