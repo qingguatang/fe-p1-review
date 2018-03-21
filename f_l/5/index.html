@@ -57,16 +57,17 @@
 	#nav .nav-aside{
 		float: right;
 	}
+	/* 命名的形式要一致，你可以统一使用中划线连接，不要混用，下面的形式被称为驼峰形式 */
 	.dbAccount:after{
 		content: "";
 		width: 0;  
-	    height: 0;  
-	    position:relative;
-	    top: 12px;
-	    left: 2px;
-	    border-width: 6px;  
-	    border-color: #d5d5d5 transparent transparent transparent;  
-	    border-style: solid dashed dashed dashed; 
+		height: 0;  
+		position:relative;
+		top: 12px;
+		left: 2px;
+		border-width: 6px;  
+		border-color: #d5d5d5 transparent transparent transparent;  
+		border-style: solid dashed dashed dashed; 
 	}
 	#theme{
 		background-color: #edf4ed;
@@ -88,6 +89,8 @@
 		margin-right: 44px;
 	}
 	.db-search{
+		/* 这个搜索面板，没有必要使用绝对定位。
+		一般情况下，只有必要时我们才会使用绝对定位 */
 		position: absolute;
 		right: 0;
 		background-color: #fff;
@@ -185,7 +188,11 @@
 		color:#555;
 	}
 	.dialog-content-pic{
-		position: relative;
+		/* 感觉这个图片的样式都是多余的
+		布局只要加个float right即可 */
+		float: right;
+
+		/* position: relative;
 	    overflow: hidden;
 	    font-size: 0;
 	    white-space: nowrap;
@@ -193,11 +200,11 @@
 	    width: 122px;
 	    height: 82px;
 	    margin-right: 5px;
-	    margin-left: 24px;
+	    margin-left: 24px; */
 	}
 	.dialog-content{
 		padding: 16px 20px;
-    	background: #f9f9f9;
+   	background: #f9f9f9;
 	}
 	.content-right{
 		float: right;
@@ -222,9 +229,9 @@
 	}
 	.list .introduce{
 		color: #333333;
-	    font-size: 13px;
-	    line-height: 1.38;
-	    font-weight: normal;
+		font-size: 13px;
+		line-height: 1.38;
+		font-weight: normal;
 	}
 	.list .introduce:hover{
 		color: #fff;
@@ -233,12 +240,12 @@
 	}
 	.list .musicType{
 		color: #999999;
-	    line-height: 1;
-	    margin-top: 10px;
-	    display: block;
-	    font-style: normal;
-	    font-size: 13px;
-	    text-align: center;
+		line-height: 1;
+		margin-top: 10px;
+		display: block;
+		font-style: normal;
+		font-size: 13px;
+		text-align: center;
 	}
 	.dbTime-title{
 		line-height: 50px;
