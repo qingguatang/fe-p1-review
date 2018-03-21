@@ -31,8 +31,8 @@
         .top-nav li {
            float: left;
            margin-left: 13px;
-           margin-right: 13px；
-           margin-top：20px;
+           margin-right: 13px;
+           margin-top: 20px;
            padding-top: 20px; 
         }
         .top-nav li {
@@ -53,7 +53,7 @@
         .user-status li {
            float: left;
            margin: 0 13px;
-           margin-top：20px;
+           margin-top: 20px;
            padding-top: 20px;
         }
         .top-nav li {
@@ -64,7 +64,7 @@
            font-size: 20px;
         }
         .user-status li a {
-           color: rgb(151, 160, 154);    
+           color: rgb(151, 160, 154);
            text-decoration: none;
         }
     
@@ -82,48 +82,69 @@
            float: right;
         }
 
-        .main1-nav {
-           display: block;
+        .main-nav {
+            /* ul和div默认就是block的，所以不需要设置 */
+           /* display: block; */
+           /* 主导航和logo都要float left */
+           float: left;
         }
-        .main1-nav li {
+        .main-nav li {
            float: left;
            margin-left: 13px;
-           margin-right: 13px；
-           margin-top：30px;
+           /* 要注意全角和半角，原来的是个全角的分号和冒号
+           我发现代码中有多次这样的错误，
+           你可以借助编辑器的语法高亮来发现有问题的点 */
+           margin-right: 13px;
+           /* margin-top: 30px; */
            padding-top: 30px; 
         }
-        .main1-nav li {
+        .main-nav li {
            margin-right: 20px;
         }
-        .main1-nav li.active {
+        .main-nav li.active {
            font-weight: bold;
            font-size: 20px;
         }
-        .main1-nav li a {
+        .main-nav li a {
            color: #072;    
            text-decoration: none;
         }
-        .main1-nav li a:hover {
+        .main-nav li a:hover {
            background: #072;  
            color: #fff;
         }
-        .main1-nav li.active a:hover {
+        .main-nav li.active a:hover {
            background: orange;
         }
 
-        .main1-nav li {
+        .main-nav li {
            float: left;
         }
-        .main1-nav li:after {
+
+        /* 下面这一段是清除浮动，
+        但在这里没有什么作用 */
+        .main-nav li:after {
            color: '';
            display: block;
            clear: both;
         }
 
         .search-bar {
-           margin-top：30px;
+            /* 搜索条要float right，可以看第5课的布局学如何布局 */
+            float: right;
+           /* margin-top: 30px; */
            padding-top: 30px; 
         }
+
+        /*
+        布局做得不错！
+
+        样式有以下几个点需要修复
+        1. 顶导航的高度，需要修改成正确的
+        2. 顶导航背景颜色，请使用颜色值，gray只是灰色，你可以使用chrome开发者工具量正确的值。
+        3. 顶导航的链接颜色，包括hover的需要调整
+        4. 你需要重新学一下 第5课，第7小节，然后把 logo, main-nav, search-bar这三个的布局自己实现一遍 。
+        */
 </style>
 </head>
 <body>
@@ -177,22 +198,20 @@
 
     <div class="page-header clearfix">
       <h1 class="logo">豆瓣 LOGO</h1>
-      <div class="main-nav">
-          <ul class="main1-nav">
-            <li>
-              <a href="https://www.douban.com/">首页</a>
-            </li>
-            <li>
-              <a href="https://www.douban.com/people/175434006/">我的豆瓣</a>
-            </li>
-            <li>
-              <a href="https://www.douban.com/explore/">浏览发现</a>
-            </li>
-            <li>
-              <a href="https://www.douban.com/gallery/">话题广场</a>
-            </li>
-            </ul>
-      </div>
+      <ul class="main-nav clearfix">
+        <li>
+            <a href="https://www.douban.com/">首页</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/people/175434006/">我的豆瓣</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/explore/">浏览发现</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/gallery/">话题广场</a>
+        </li>
+      </ul>
       <div class="search-bar">
           <input type="搜索你感兴趣的内容和人"></input>
       </div>
