@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>前端0316</title>
+</head>
+<style type="text/css">
+	/* cssRest */
+	body{
+		padding: 0;
+		margin: 0;
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	ul{
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	h1,h5{
+		margin:0;
+		padding:0;
+	}
+	p{
+		margin-top:0;
+		margin-bottom: 0;
+	}
+	.clearfix:after{
+		content: '';
+		display:block;
+		clear: both;
+	}
+	#nav li{
+		float: left;
+	}
+	#nav li a{
+		color:#d5d5d5;
+		padding: 0 12px;
+		font-size: 12px;
+	}
+	#nav li a:hover{
+		color: #fff;
+	}
+	#nav{
+		background-color: #545657;
+		line-height: 28px;
+	}
+	#nav .dbapp{
+		padding: 0 8px;
+	}
+	#nav .nav-content{
+		float: left;
+	}
+	#nav .nav-aside{
+		float: right;
+	}
+	.dbAccount:after{
+		content: "";
+		width: 0;  
+	    height: 0;  
+	    position:relative;
+	    top: 12px;
+	    left: 2px;
+	    border-width: 6px;  
+	    border-color: #d5d5d5 transparent transparent transparent;  
+	    border-style: solid dashed dashed dashed; 
+	}
+	#theme{
+		background-color: #edf4ed;
+	}
+	.theme-content{
+		width: 1040px;
+		margin: 0 auto;
+		padding: 22px 0;
+		position: relative;
+	}
+	.theme-nav  li{
+		float: left;
+	}
+	.logoPic{
+		width:153px;
+		height: 30px;
+		float: left;
+		background:url('images/db_logo.png') no-repeat left center;
+		margin-right: 44px;
+	}
+	.db-search{
+		position: absolute;
+		right: 0;
+		background-color: #fff;
+	}
+	.db-search input{
+		outline: none;
+		width:280px;
+		height: 30px;
+		padding: 0 10px;
+		box-sizing: border-box;
+		border:1px solid #e1e9e1;
+	}
+	.db-search input{
+		background:url('images/search.png') no-repeat 256px center;
+	}
+	.theme-nav{
+		float: left;
+		line-height: 30px;
+	}
+	.theme-nav li{
+		margin-right: 20px;
+	}
+	.theme-nav a{
+		color: #072;
+	}
+	.theme-nav a:hover{
+		color:#fff;
+		background-color: #072;
+	}
+	.theme-nav-img{
+		position: absolute;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */ 
+		font-size: 12px;
+		color: #bbbbbb; 
+	} 
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+		font-size: 12px;
+		color: #bbbbbb; 
+	} 
+	::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+		font-size: 12px;
+		color: #bbbbbb;  
+	} 
+	:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+		font-size: 12px;
+		color: #bbbbbb;  
+	} 
+	#main{
+		width:1040px;
+		margin: 0 auto;
+	}
+	.content-left{
+		width:675px;
+		float: left;
+	}
+	.dialog{
+		padding: 20px 0;
+    	border-bottom: 1px solid #ccc;
+	}
+	.dialog-title{
+		margin-bottom:15px;
+		font-size: 13px;
+    	color: #9d9d9d;
+	}
+	.dialog-title a{
+		font-size: 14px;
+		color: #555;
+		font-weight: bolder;
+	}
+	.dialog a:hover{
+		color:#fff;
+		background-color:#37a;
+	}
+	.dialog-left{
+		float: left;
+	}
+	.dialog-right{
+		width:607px;
+		float: right;
+	}
+	.dialog-content-left{
+		float: left;
+		width:416px;
+	}
+	.dialog-content-left a{
+		color: #37a;
+		font-size: 15px;
+	}
+	.dialog-content-left h5{
+		margin-bottom:4px;
+	}
+	.dialog-content-left p{
+		font-size: 13px;
+		color:#555;
+	}
+	.dialog-content-pic{
+		position: relative;
+	    overflow: hidden;
+	    font-size: 0;
+	    white-space: nowrap;
+	    max-height: none;
+	    width: 122px;
+	    height: 82px;
+	    margin-right: 5px;
+	    margin-left: 24px;
+	}
+	.dialog-content{
+		padding: 16px 20px;
+    	background: #f9f9f9;
+	}
+	.content-right{
+		float: right;
+	}
+	.dbTime{
+		color:#007722;
+		font-size: 15px;
+		float: left;
+	}
+	.list{
+		width:80px;
+	}
+	.more{
+		color:#3377aa;
+		font-size: 12px;
+		padding-left: 5px;
+	}
+	.more:hover{
+		color:#fff;
+		background-color:#37a;
+		cursor: pointer;
+	}
+	.list .introduce{
+		color: #333333;
+	    font-size: 13px;
+	    line-height: 1.38;
+	    font-weight: normal;
+	}
+	.list .introduce:hover{
+		color: #fff;
+		background-color:#37a;
+		cursor: pointer;
+	}
+	.list .musicType{
+		color: #999999;
+	    line-height: 1;
+	    margin-top: 10px;
+	    display: block;
+	    font-style: normal;
+	    font-size: 13px;
+	    text-align: center;
+	}
+	.dbTime-title{
+		line-height: 50px;
+	}
+	.list{
+		float: left;
+		margin-right: 40px;
+	}
+	.list img{
+		margin-bottom:10px;
+	}
+</style>
+<body>
+	<div id="nav" class="clearfix">
+		<ul class="nav-content clearfix">
+			<li><a href="#">豆瓣</a></li>
+			<li><a href="#">读书</a></li>
+			<li><a href="#">电影</a></li>
+			<li><a href="#">音乐</a></li>
+			<li><a href="#">同城</a></li>
+			<li><a href="#">小组</a></li>
+			<li><a href="#">阅读</a></li>
+			<li><a href="#">FM</a></li>
+			<li><a href="#">时间</a></li>
+			<li><a href="#">市集</a></li>
+			<li><a href="#">更多</a></li>
+		</ul>
+		<ul class="nav-aside clearfix">
+			<li><a href="#" class="dbapp">下载豆瓣客户端</a></li>
+			<li><a href="#">提醒</a></li>
+			<li><a href="#">豆邮(1)</a></li>
+			<li><a href="#" class="dbAccount">无名侠女的账号</a></li>
+		</ul>
+	</div>
+	<div id="theme">
+		<div class="theme-content clearfix">
+			<div class="logoPic">
+				<a href="#"></a>
+			</div>
+			<div class="theme-nav clearfix">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">我的豆瓣</a></li>
+					<li><a href="#">浏览发现</a></li>
+					<li><a href="#">话题广场</a><img src="images/new_menu.gif" class="theme-nav-img"></li>
+				</ul>
+			</div>
+			<div class="db-search">
+				<input type="text" placeholder="搜索你感兴趣的内容和人...">
+			</div>
+		</div>
+	</div>
+	<div id="main" class="clearfix">
+		<div class="content-left">
+			<div class="dialog clearfix">
+				<div class="dialog-left"><img src="images/person.jpg"></div>
+				<div class="dialog-right">
+					<div class="dialog-title"><a href="#">红孩儿</a>的日记</div>
+					<div class="dialog-content clearfix">
+						<div class="dialog-content-left">
+							<h5><a href="#">天台养花指南</a></h5>
+							<p>如果人是星星，故事就是星座。 故事何为？ 故事为人生，故事点石成金，故事比生活更长。 故事，将琐碎的人生事件连成线，也将这世界变成一个可以被理解的交互界面。 一个人要用故事完成自我...</p>
+						</div>
+						<img src="images/flower.jpg" alt="花" class="dialog-content-pic">
+					</div>
+				</div>
+			</div>
+			<div class="dialog clearfix">
+				<a class="dialog-left" href="#"><img src="images/person.jpg"></a>
+				<div class="dialog-right">
+					<div class="dialog-title"><a href="#">红孩儿</a>的日记</div>
+					<div class="dialog-content clearfix">
+						<div class="dialog-content-left">
+							<h5><a href="#">天台养花指南</a></h5>
+							<p>如果人是星星，故事就是星座。 故事何为？ 故事为人生，故事点石成金，故事比生活更长。 故事，将琐碎的人生事件连成线，也将这世界变成一个可以被理解的交互界面。 一个人要用故事完成自我...</p>
+						</div>
+						<img src="images/flower.jpg" alt="花" class="dialog-content-pic">
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="content-right">
+			<div class="clearfix dbTime-title">
+				<h1 class="dbTime">豆瓣时间......</h1>(<a href="#" class="more">查看更多</a>)
+			</div>
+			<div class="clearfix">
+				<div class="list">
+					<a href="#"><img src="images/db_time1.jpg"></a>
+					<strong class="introduce">成为更好的自己——许燕人格心理学28讲</strong>
+					<em class="musicType">音频专栏</em>
+				</div>
+				<div class="list">
+					<a href="#"><img src="images/db_time2.jpg"></a>
+					<strong class="introduce">一个故事的诞生——22堂创意思维写作课</strong>
+					<em class="musicType">音频专栏</em>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
