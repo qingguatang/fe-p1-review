@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* cssreset */
+        li {
+           list-style: none;
+        }
+        body,ul,li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .top-nav {
+          float: left;
+        }
+        .top-nav li {
+           float: left;
+           margin-left: 13px;
+           margin-right: 13px； 
+        }
+        .top-nav li {
+           margin-right: 20px;
+        }
+        .top-nav li.active {
+           font-weight: bold;
+           font-size: 20px;
+        }
+        .top-nav li a {
+           color: rgb(151, 160, 154);    
+           text-decoration: none;
+        }
+
+        .user-status {
+           float: right;
+        }
+        .user-status li {
+           float: left;
+           margin: 0 13px;
+        }
+        .top-nav li {
+           margin-right: 20px;
+        }
+        .user-status li.active {
+           font-weight: bold;
+           font-size: 20px;
+        }
+        .user-status li a {
+           color: rgb(151, 160, 154);    
+           text-decoration: none;
+        }
+    
+        .page-header {
+           width: 1040px;
+           margin: 0 auto; /* 居中 */
+        }
+        .page-header .logo {
+           float: left;
+        }
+        .page-header .man-nav {
+           float: left;
+        }
+        .page-header .search-bar {
+           float: right;
+        }
+
+        .main1-nav {
+           display: block;
+        }
+        .main1-nav li {
+           float: left;
+           margin-left: 13px;
+           margin-right: 13px； 
+        }
+        .main1-nav li {
+           margin-right: 20px;
+        }
+        .main1-nav li.active {
+           font-weight: bold;
+           font-size: 20px;
+        }
+        .main1-nav li a {
+           color: #072;    
+           text-decoration: none;
+        }
+        .main1-nav li a:hover {
+           background: #072;  
+           color: #fff;
+        }
+        .main1-nav li.active a:hover {
+           background: orange;
+        }
+
+        .main1-nav li {
+           float: left;
+        }
+        .main1-nav li:after {
+           color: '';
+           display: block;
+           clear: both;
+        }
+</style>
+</head>
+<body>
+    <div class="top-bar clearfix">
+    <ul class="top-nav clearfix">
+        <li>
+            <a href="https://www.douban.com/">豆瓣</a>
+        </li>
+        <li>
+            <a href="https://book.douban.com/">读书</a>
+        </li>
+        <li>
+            <a href="https://movie.douban.com/">电影</a>
+        </li>
+        <li>
+            <a href="https://music.douban.com/">音乐</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/location/chengdu/">同城</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/group/guide?guide=1">小组</a>
+        </li>
+        <li>
+            <a href="https://read.douban.com/?dcs=top-nav&dcm=douban">阅读</a>
+        </li>
+        <li>
+            <a href="https://douban.fm/?from_=shire_top_nav">FM</a>
+        </li>
+        <li>
+            <a href="https://time.douban.com/?dt_time_source=douban-web_top_nav">时间</a>
+        </li>
+        <li>
+            <a href="https://market.douban.com/?utm_campaign=douban_top_nav&utm_source=douban&utm_medium=pc_web">市集</a>
+        </li>
+        </ul>
+
+    <ul class="user-status clearfix">
+        <li>
+            <a href="https://www.douban.com/doubanapp/frodo?channel=top-nav&referer=https%3A%2F%2Fwww.douban.com%2F&wechat=0&os=Windows">下载客户端</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/notification/">提醒</a>
+        </li>
+        <li>
+            <a href="https://www.douban.com/doumail/">豆邮</a>
+        </li>
+
+    </ul>
+    </div>
+
+    <div class="page-header clearfix">
+      <h1 class="logo">豆瓣 LOGO</h1>
+      <div class="main-nav">
+          <ul class="main1-nav">
+            <li>
+              <a href="https://www.douban.com/">首页</a>
+            </li>
+            <li>
+              <a href="https://www.douban.com/people/175434006/">我的豆瓣</a>
+            </li>
+            <li>
+              <a href="https://www.douban.com/explore/">浏览发现</a>
+            </li>
+            <li>
+              <a href="https://www.douban.com/gallery/">话题广场</a>
+            </li>
+            </ul>
+      </div>
+      <div class="search-bar">
+          <input type="搜索你感兴趣的内容和人"></input>
+      </div>
+    </div>
+
+</body>
+</html>
