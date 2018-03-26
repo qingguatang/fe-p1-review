@@ -1,0 +1,98 @@
+/*
+* @Author: Administrator
+* @Date:   2018-03-23 18:28:01
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-23 20:06:02
+*/
+
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.searchHead{
+	margin-left: 16px;
+	position: relative;
+	top: 3px;
+}
+.searchHead ul{
+	list-style: none;
+}
+.searchHead ul li{
+	float: left;
+	margin-right: 4px;
+	line-height: 22px;
+	font-size: 12px;
+	width: 36px;
+	text-align: center;
+	color: #F40;
+}
+.searchHead ul li.firsrLi{
+	background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+  background-repeat: repeat-x;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  color: #FFF;
+  font-weight: 700;
+}
+.searchBox{
+	border: 2px solid #ff5000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: none;
+  height: 36px;
+  width: 555px;
+  overflow: hidden;
+  vertical-align: middle;
+  line-height: 30px;
+  display: inline-block;
+}
+.searchBoxInput{
+	border:0px solid red;
+	line-height: 24px;
+	padding-left: 5px;
+	background-image: url(camera.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 26px;
+	width: 472px;
+	padding-right: 60px;
+	font-size: 12px;
+}
+.searchBoxInput:focus{
+	outline:none;
+}
+.searchBoxButton{
+	background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+	height: 40px;
+	width: 74px;
+	border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border:0px;
+  margin-left: -5px;
+  position: relative;
+  top: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFF;
+}
+.selectmenu{
+	background-color: #eee;
+	position: absolute;
+	width: 548px;
+	left: 2px;
+	font-size: 12px;
+	padding-left: 3px;
+}
+.selectmenu li{
+	display: block;
+	width: 548px;
+	height: 26px;
+}
