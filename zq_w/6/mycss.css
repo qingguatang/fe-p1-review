@@ -7,10 +7,15 @@
 
 *{
 	margin:0px;
-	padding: 0px;
+  padding: 0px;
+  /* 一般全局的font-family设置在body上 */
 	font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
 }
 .clearfix:after{
+  /* 清除浮动，visibility不需要设置
+  其实height也不需要设置
+  只需要 content, display和clear即可
+  写样式要精简 */
 	content:"";
 	display:block;
 	height:0;
@@ -18,7 +23,13 @@
 	visibility:hidden;
 }
 .searchHead{
-	margin-left: 16px;
+  margin-left: 16px;
+  /* 这里使用relative的原因
+  应该是你下面的布局没布好
+  下面的searchBox你使用了inline-block
+  所以就没对齐, 这个3px是你随便调好的
+  其实在其他浏览器上不一定能正常工作,
+  比如我在safari中打开就是乱的。 */
 	position: relative;
 	top: 3px;
 }
@@ -42,6 +53,11 @@
   color: #FFF;
   font-weight: 700;
 }
+
+/* searchBox这一部分请用float重新布局
+尝试去掉所有通过position relative进行微调的部分
+因为这个微调在不同浏览器上是不一致的。
+*/
 .searchBox{
 	border: 2px solid #ff5000;
   border-top-left-radius: 20px;
