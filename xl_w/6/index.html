@@ -26,29 +26,40 @@
 
         .top-bar {
             background-color: #545652;
+            /* height能不用就不用，这个height无意义 */
             height: 28px;
             min-width: 1024px;
         }
 
         .top-nav {
+            /* 这个float left也是无意义的
+            浮动布局只要做两步
+            1. 元素加float-left
+            2. 父元素加clearfix */
             float: left;
         }
 
         .top-nav li {
             float: left;
             padding: 0 12px;
+            /* 这里的inline-block是多余的，float里面的元素，默认就是block方式展示的。 */
             display: inline-block;
+            /* 这个zoom: 1是为了做IE老版本兼容用的，现在如果不需要支持以前版本的IE这个可以不要 */
             zoom: 1;
             line-height: 28px;
+            /* 下面在a链接中已定义了文字大小，这里的大小没必要写 */
             font-size: 12px;
         }
 
         .top-nav li a {
-            corlor: #d5d5d5;
+            /* 下面颜色拼写错误，注意看编辑器的语法加亮
+            不过看下面的代码，发现这个color是多余的
+            corlor: #d5d5d5 */
         }
 
         .top-nav li.active {
             font-weight: bold;
+            /* 这个font-size不需要，它会继承你在li上设置的大小， 不写没必要的代码 */
             font-size: 12px;
         }
 
@@ -69,13 +80,16 @@
         .user-status li {
             float: left;
             padding: 0 12px;
+            /* 这里的inline-block是多余的，float里面的元素，默认就是block方式展示的。 */
             display: inline-block;
+            /* 这个zoom: 1是为了做IE老版本兼容用的，现在如果不需要支持以前版本的IE这个可以不要 */
             zoom: 1;
             line-height: 28px;
             font-size: 12px;
         }
 
         .user-status li a {
+            /* color拼写错误，不过下面已有这块代码，所以这一段无意义 */
             corlor: #d5d5d5;
         }
 
@@ -106,12 +120,20 @@
             height: 74px;
             background-color: #edf4ed;
             /* 居中 */
+
+            /* 居中分两步
+            1. 设置宽度
+            2. 设置margin: 0 auto;
+            这里没有设置宽度，所以并没有居中 */
         }
 
+        /* 你这里的名字叫logo，但是下面的logo不叫logo，叫douban-png */
         .page-header .logo {
             float: left;
         }
 
+        /* 这里拼写错误，所以没有布局好
+        你下面的元素叫main-nav, 少了一个i */
         .page-header .man-nav {
             float: left;
         }
@@ -161,12 +183,20 @@
         .bodynote {
             border: 1px solid red;
         }
-        .bodynot-left {
+
+        /* 你下面的两个单词都拼错了，和HTML中的节点不一致
+        一定要注意拼写是否正确，如果不能正常工作时，就检查单词
+        使用Chrome Developer检查 */
+        .bodynote-left {
             border: 1px solid blue;
             float: left;
+            /* 布局，如果要固定宽度，需要设置一个width
+            否则会随着内容自动撑开的 */
+            width: 675px;
         }
-        .bodynote .bodynot-right {
+        .bodynote .bodynote-right {
             float: right;
+            width: 300px;
         }
     </style>
 </head>
@@ -245,7 +275,7 @@
         </div>
     </div>
 
-    <div class="bodynote">
+    <div class="bodynote clearfix">
         <div class="bodynote-left">
             <div class="head-portait">
                 <a class="image1">
