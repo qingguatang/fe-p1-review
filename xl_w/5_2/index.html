@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* cssreset */
+        li {
+            list-style: none;
+        }
+
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .top-bar {
+            background-color: #545652;
+            /* height能不用就不用，这个height无意义 */
+            height: 28px;
+            min-width: 1024px;
+        }
+
+        .top-nav {
+            /* 这个float left也是无意义的
+            浮动布局只要做两步
+            1. 元素加float-left
+            2. 父元素加clearfix */
+            float: left;
+        }
+
+        .top-nav li {
+            float: left;
+            padding: 0 12px;
+            /* 这里的inline-block是多余的，float里面的元素，默认就是block方式展示的。 */
+            display: inline-block;
+            /* 这个zoom: 1是为了做IE老版本兼容用的，现在如果不需要支持以前版本的IE这个可以不要 */
+            zoom: 1;
+            line-height: 28px;
+            /* 下面在a链接中已定义了文字大小，这里的大小没必要写 */
+            font-size: 12px;
+        }
+
+        .top-nav li a {
+            /* 下面颜色拼写错误，注意看编辑器的语法加亮
+            不过看下面的代码，发现这个color是多余的
+            corlor: #d5d5d5 */
+        }
+
+        .top-nav li.active {
+            font-weight: bold;
+            /* 这个font-size不需要，它会继承你在li上设置的大小， 不写没必要的代码 */
+            font-size: 12px;
+        }
+
+        .top-nav li a {
+            color: #d5d5d5;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .top-nav li a:hover {
+            color: white;
+        }
+
+        .user-status {
+            float: right;
+        }
+
+        .user-status li {
+            float: left;
+            padding: 0 12px;
+            /* 这里的inline-block是多余的，float里面的元素，默认就是block方式展示的。 */
+            display: inline-block;
+            /* 这个zoom: 1是为了做IE老版本兼容用的，现在如果不需要支持以前版本的IE这个可以不要 */
+            zoom: 1;
+            line-height: 28px;
+            font-size: 12px;
+        }
+
+        .user-status li a {
+            /* color拼写错误，不过下面已有这块代码，所以这一段无意义 */
+            corlor: #d5d5d5;
+        }
+
+        .top-nav li {
+            margin-right: 20px;
+        }
+
+        .user-status li.active {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .user-status li a {
+            color: #d5d5d5;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 13px;
+            margin-right: 13px;
+            margin-top: 20px;
+        }
+
+        .user-status li a:hover {
+            color: white;
+        }
+
+        .page-header {
+            margin: 0 auto;
+            height: 74px;
+            background-color: #edf4ed;
+            /* 居中 */
+
+            /* 居中分两步
+            1. 设置宽度
+            2. 设置margin: 0 auto;
+            这里没有设置宽度，所以并没有居中 */
+        }
+
+        /* 你这里的名字叫logo，但是下面的logo不叫logo，叫douban-png */
+        .page-header .logo {
+            float: left;
+        }
+
+        /* 这里拼写错误，所以没有布局好
+        你下面的元素叫main-nav, 少了一个i */
+        .page-header .man-nav {
+            float: left;
+        }
+
+        .page-header .search-bar {
+            float: right;
+        }
+
+        .douban-png {
+            position: absolute;
+            margin-top: 22px;
+            margin-left: -8px;
+        }
+
+        .main1-nav {
+            float: left;
+            margin-left: 165px;
+            margin-top: 29px;
+        }
+
+        .main1-nav li {
+            margin-left: 24px;
+        }
+
+        .main1-nav li a {
+            font-size: 16px;
+            color: green;
+        }
+
+        .main1-nav li a:hover {
+            background: green;
+            color: #fff;
+        }
+
+        .main1-nav li {
+            float: left;
+        }
+
+        .search-bar {
+            float: right;
+            padding-top: 29px;
+        }
+
+        .page-header img {
+            width: 184px;
+        }
+        .bodynote {
+            border: 1px solid red;
+        }
+
+        /* 你下面的两个单词都拼错了，和HTML中的节点不一致
+        一定要注意拼写是否正确，如果不能正常工作时，就检查单词
+        使用Chrome Developer检查 */
+        .bodynote-left {
+            border: 1px solid blue;
+            float: left;
+            /* 布局，如果要固定宽度，需要设置一个width
+            否则会随着内容自动撑开的 */
+            width: 675px;
+        }
+        .bodynote .bodynote-right {
+            float: right;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar clearfix">
+        <ul class="top-nav clearfix">
+            <li>
+                <a href="https://www.douban.com/">豆瓣</a>
+            </li>
+            <li>
+                <a href="https://book.douban.com/">读书</a>
+            </li>
+            <li>
+                <a href="https://movie.douban.com/">电影</a>
+            </li>
+            <li>
+                <a href="https://music.douban.com/">音乐</a>
+            </li>
+            <li>
+                <a href="https://www.douban.com/location/chengdu/">同城</a>
+            </li>
+            <li>
+                <a href="https://www.douban.com/group/guide?guide=1">小组</a>
+            </li>
+            <li>
+                <a href="https://read.douban.com/?dcs=top-nav&dcm=douban">阅读</a>
+            </li>
+            <li>
+                <a href="https://douban.fm/?from_=shire_top_nav">FM</a>
+            </li>
+            <li>
+                <a href="https://time.douban.com/?dt_time_source=douban-web_top_nav">时间</a>
+            </li>
+            <li>
+                <a href="https://market.douban.com/?utm_campaign=douban_top_nav&utm_source=douban&utm_medium=pc_web">市集</a>
+            </li>
+        </ul>
+
+        <ul class="user-status clearfix">
+            <li>
+                <a href="https://www.douban.com/doubanapp/frodo?channel=top-nav&referer=https%3A%2F%2Fwww.douban.com%2F&wechat=0&os=Windows">下载客户端</a>
+            </li>
+            <li>
+                <a href="https://www.douban.com/notification/">提醒</a>
+            </li>
+            <li>
+                <a href="https://www.douban.com/doumail/">豆邮</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="page-header clearfix">
+        <a class="douban-png" href="#">
+            <img width="153px" height="30px" src="images/douban.png" alt="">
+        </a>
+        <div class="main-nav">
+            <ul class="main1-nav">
+                <li>
+                    <a href="https://www.douban.com/">首页</a>
+                </li>
+                <li>
+                    <a href="https://www.douban.com/people/175434006/">我的豆瓣</a>
+                </li>
+                <li>
+                    <a href="https://www.douban.com/explore/">浏览发现</a>
+                </li>
+                <li>
+                    <a href="https://www.douban.com/gallery/">话题广场</a>
+                </li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="搜索你感兴趣的内容和人"></input>
+        </div>
+    </div>
+
+    <div class="bodynote clearfix">
+        <div class="bodynote-left">
+            <div class="head-portait">
+                <a class="image1">
+                    <img width="48px" height="48px" src="images/005.jpg" alt="">
+                </a>
+            </div>
+            <div class="nickname">
+                <a href="#">西湘</a>的日记
+            </div>
+            <div class="note">
+                <div class="theme">
+                    <a href="#">行山记</a>
+                </div>
+                <div class="image">
+                    <img width="122px" src="images/006.jpg" alt="">
+                </div>
+            </div>
+            <div class="time">
+                昨天，来自 热门精选
+            </div>
+        </div>
+        <div class="bodynote-right">
+            <div class="douban-time">
+                <p>
+                    "豆瓣时间......"
+                    <span>(</span>
+                    <a href="#">查看全部</a>
+                    <span>)</span>
+                </p>
+            </div>
+            <div class="item">
+                <div class="left">
+                    <div class="image1">
+                        <a href="#">
+                            <img src="images/007.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="word1">
+                        <a href="#">12文豪--围绕日本文学的冒险</a>
+                    </div>
+                    <div class="first">
+                        音频专栏
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image2">
+                        <a href="#">
+                            <a href="#">
+                                <img src="images/008.jpg" alt="">
+                            </a>
+                        </a>
+                    </div>
+                    <div class="word2">
+                        <a href="#">成为更好的自己--许燕人格心理学28讲</a>
+                    </div>
+                    <div class="second">
+                        音频专栏
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
