@@ -7,8 +7,14 @@
 </head>
 <body>
   <div>
+    <!-- 这个clearfix可以不用写
+    后面我们学了less或sass，则会直接在css上写clearfix
+    -->
   	<div class="searchHead clearfix">
   		<ul class="clearfix">
+        <!-- 一般来说，我们的当前项叫active
+        因为现在刚好是第一项选中，假设现在是第二个项选中
+        你这个名字就不合适了 -->
   			<li class="firsrLi">宝贝</li>
   			<li>天猫</li>
   			<li>店铺</li>
@@ -20,6 +26,8 @@
   	</div>
   	<input class="searchBoxButton" type="button" value="搜索">
   </div>
+  <!--这个下拉面板，应该和搜索面板在一个容器中
+    否则移动了搜索面板，这个下拉面板位置就不准确了-->
   <div>
   	<ul class="selectmenu">
   		<li>iphone 6s 手机</li>
