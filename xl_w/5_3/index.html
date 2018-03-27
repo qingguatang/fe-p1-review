@@ -211,6 +211,7 @@
 
         .note a:hover {
             color: #fff;
+            /* 下面的去除下划线，实际在上在这句`.note a`中已设置过了，它会继承的，所以不需要再次设置 */
             text-decoration: none;
             background: #37a;
         }
@@ -222,7 +223,12 @@
 
         .image {
             float: right;
+            /* 这下面的margin，前面几个应该带单位，不能省略
+            应该为 margin: 4px 5px 0 24px; */
             margin: 4 5 0 24px;
+            /* 一般来说我们很少设置高度，如果设置了高，要检测一下是否有必要
+            下面的overflow: hidden，这里也起不到什么作用，我们只写必要的代码
+            因为在实际的工作过程中，写的代码都要维护的，所以写得少就是好 */
             height: 82px;
             overflow: hidden;
         }
@@ -242,6 +248,7 @@
         .douban-time div {
             float: left;
             width: 80px;
+            /* 一般来说，我们在CSS中除非必要，否则不设置高度 */
             height: 200px;
             margin-right: 40px;
             margin-top: 12px;
@@ -266,6 +273,11 @@
             background: #37a;
             color: #fff;
         }
+
+        /* 像下面的left,right，其实是指位置，如果当独使用的话很可能会和其他模块里面命名的left,right冲突，
+        因此要加个模块名作为前缀
+        比如 `.douban-time .left a`，等第二个迭代我们会学less，这样就能够让css支持嵌套结构了
+        */
 
         .left a {
             font-size: 13px;
@@ -377,7 +389,9 @@
         </div>
     </div>
 
-    <div class="bodynote">
+    <!-- 因为bodynote的两个子元素设置了浮动，
+    所以需要添加clearfix -->
+    <div class="bodynote clearfix">
         <div class="bodynote-left clearfix">
             <div class="head-portait">
                 <img width="48px" height="48px" src="images/005.jpg" alt="">
