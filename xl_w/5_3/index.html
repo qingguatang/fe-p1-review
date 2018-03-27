@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* cssreset */
+
+        li {
+            list-style: none;
+        }
+
+        body,ul,li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .top-bar {
+            background-color: #545652;
+            min-width: 1024px;
+        }
+
+        .top-bar .top-nav {
+            float: left;
+        }
+
+        .top-bar .user-status {
+            float: right;
+        }
+
+        .top-nav li {
+            float: left;
+            padding: 0 12px;
+            line-height: 28px;
+        }
+
+        .top-nav li.active {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .top-nav li a {
+            color: #d5d5d5;
+            text-decoration: none;
+        }
+
+        .top-nav li a:hover {
+            color: white;
+        }
+
+
+        .user-status li {
+            float: right;
+            padding: 0 12px;
+            line-height: 28px;
+        }
+
+        .user-status li.active {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .user-status li a {
+            color: #d5d5d5;
+            text-decoration: none;
+        }
+
+        .user-status li a:hover {
+            color: white;
+        }
+
+        .second {
+            width: 1366px;
+            background-color: #edf4ed;
+        }
+
+        .page-header {
+            width: 1040px;
+            margin: 0 auto;
+            /* 居中 */
+            height: 74px;
+        }
+
+        .page-header .douban-png {
+            float: left;
+        }
+
+        .page-header .main-nav {
+            float: left;
+        }
+
+        .page-header .search-bar {
+            float: right;
+        }
+
+        .douban-png {
+            position: absolute;
+            margin-top: 22px;
+            margin-left: -8px;
+        }
+
+        .main1-nav {
+            float: left;
+            margin-left: 165px;
+            margin-top: 29px;
+        }
+
+        .main1-nav li {
+            margin-left: 24px;
+        }
+
+        .main1-nav li a {
+            font-size: 16px;
+            color: green;
+            text-decoration: none;
+        }
+
+        .main1-nav li a:hover {
+            background: green;
+            color: #fff;
+        }
+
+        .main1-nav li {
+            float: left;
+        }
+
+        .search-bar {
+            float: right;
+            padding-top: 29px;
+        }
+
+        .search-bar input {
+            background: #fff;
+            margin: 0;
+            width: 242px;
+            height: 28px;
+            padding-left: 10px;
+            outline: none;
+            vertical-align: middle;
+            font-style: inherit;
+            font-weight: inherit;
+        }
+
+        .page-header img {
+            width: 184px;
+        }
+
+        .bodynote {
+            width: 1040px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .bodynote .bodynote-left {
+            float: left;
+        }
+
+        .bodynote .douban-time {
+            float: right;
+        }
+
+        .bodynote-left {
+            width: 675px;
+            margin: 0 auto;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .head-portait {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .nickname {
+            float: left;
+            color: #9d9d9d;
+        }
+
+        .nickname a {
+            color: #555;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nickname a:hover {
+            background: #37a;
+            color: #fff;
+        }
+
+        .note {
+            float: left;
+            width: 567px;
+            padding: 16px 20px;
+            background: #f9f9f9;
+            margin-top: 5px;
+        }
+
+        .note a {
+            color: #669;
+            text-decoration: none;
+        }
+
+        .note a:hover {
+            color: #fff;
+            text-decoration: none;
+            background: #37a;
+        }
+
+        .note p {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .image {
+            float: right;
+            margin: 4 5 0 24px;
+            height: 82px;
+            overflow: hidden;
+        }
+
+        .time {
+            float: left;
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        .douban-time img {
+            width: 80px;
+            height: 110px;
+        }
+
+        .douban-time div {
+            float: left;
+            width: 80px;
+            height: 200px;
+            margin-right: 40px;
+            margin-top: 12px;
+        }
+
+        .douban-time p {
+            font-size: 16px;
+            color: green;
+        }
+
+        .douban-time p span {
+            font-size: 13px;
+            color: black;
+        }
+
+        .douban-time p a {
+            font-size: 13px;
+            color: #37a;
+        }
+
+        .douban-time p a:hover {
+            background: #37a;
+            color: #fff;
+        }
+
+        .left a {
+            font-size: 13px;
+            color: black;
+        }
+
+        .left a:hover {
+            background: #37a;
+            color: #fff;
+        }
+
+        .right a {
+            font-size: 13px;
+            color: black;
+        }
+
+        .right a:hover {
+            background: #37a;
+            color: #fff;
+        }
+
+        .left div {
+            font-size: 13px;
+            color: #bbb;
+            margin-top: 5px;
+        }
+
+        .right div {
+            font-size: 13px;
+            color: #bbb;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar clearfix">
+        <ul class="top-nav clearfix">
+            <li>
+                <a href="#">豆瓣</a>
+            </li>
+            <li>
+                <a href="#">读书</a>
+            </li>
+            <li>
+                <a href="#">电影</a>
+            </li>
+            <li>
+                <a href="#">音乐</a>
+            </li>
+            <li>
+                <a href="#">同城</a>
+            </li>
+            <li>
+                <a href="#">小组</a>
+            </li>
+            <li>
+                <a href="#">阅读</a>
+            </li>
+            <li>
+                <a href="#">FM</a>
+            </li>
+            <li>
+                <a href="#">时间</a>
+            </li>
+            <li>
+                <a href="#">市集</a>
+            </li>
+        </ul>
+
+        <ul class="user-status clearfix">
+            <li>
+                <a href="#">下载客户端</a>
+            </li>
+            <li>
+                <a href="#">提醒</a>
+            </li>
+            <li>
+                <a href="#">豆邮</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="second">
+        <div class="page-header clearfix">
+            <a class="douban-png" href="#">
+                <img width="153px" height="30px" src="images/douban.png" alt="">
+            </a>
+            <div class="main-nav">
+                <ul class="main1-nav">
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">我的豆瓣</a>
+                    </li>
+                    <li>
+                        <a href="#">浏览发现</a>
+                    </li>
+                    <li>
+                        <a href="#">话题广场</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input value="搜索你感兴趣的内容和人......"></input>
+            </div>
+        </div>
+    </div>
+
+    <div class="bodynote">
+        <div class="bodynote-left clearfix">
+            <div class="head-portait">
+                <img width="48px" height="48px" src="images/005.jpg" alt="">
+            </div>
+            <div class="nickname">
+                <a href="#">西湘</a>的日记
+            </div>
+            <div class="note">
+                <a href="#">行山记</a>
+                <div class="image">
+                    <img width="122px" src="images/006.jpg" alt="">
+                </div>
+                <p>
+                    朋友昨天问我：你去过菠萝寺吗？ 我一听这寺庙的名字好新鲜好萌，顿时来了兴趣，再加上朋友说这个寺庙是建在悬崖边上的，更加想去看看了，遂马上决定次日上山。 尽管早上五点才睡着，但是八...
+                </p>
+            </div>
+            <div class="time">
+                昨天，来自 热门精选
+            </div>
+        </div>
+        <div class="douban-time">
+            <p>
+                "豆瓣时间......"
+                <span>(</span>
+                <a href="#">查看全部</a>
+                <span>)</span>
+            </p>
+            <div class="left">
+                <a href="#">
+                    <img src="images/007.jpg" alt="">
+                </a>
+                <a href="#">12文豪--围绕日本文学的冒险</a>
+                <div>音频专栏</div>
+            </div>
+            <div class="right">
+                <a href="#">
+                    <img src="images/008.jpg" alt="">
+                </a>
+                <a href="#">成为更好的自己--许燕人格心理学28讲</a>
+                <div>音频专栏</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
