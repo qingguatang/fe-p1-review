@@ -26,3 +26,4 @@
 ### 6. 列表和图标
 
 - [zq_w](https://qingguatang.github.io/fe-p1/zq_w/6/index.html)
+- [xl_w](https://qingguatang.github.io/fe-p1/xl_w/6/index.html)
