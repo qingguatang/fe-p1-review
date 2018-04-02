@@ -54,7 +54,8 @@
         </ul>
     </div>
     <div class="page-header clearfix">
-        <ul class="main1-nav">
+      <!-- clearfix应该加在float:left元素的直接父级上，也就是下面这个ul上。 -->
+        <ul class="main1-nav"> <!-- 应该加这个元素上 -->
             <li>
                 <a href="#">首页</a>
             </li>
@@ -73,6 +74,7 @@
 
 
     <div class="icon clearfix">
+        <!-- 这个clearfix也一样，应该加在li的直接父级上 -->
         <ul class="icon-nav">
             <li class="talk">
                 <a href="#">说句话</a>
@@ -125,6 +127,50 @@
             </li>
         </ul>
     </div>
+
+    <!-- 我重新写了下搜索面板的结构，其实他们是一体的，所以写在一个search-panel中
+    你根据下面结构，补上CSS，将样式做得和淘宝搜索面板相似 -->
+    <div class="search-panel">
+      <div class="tabs">
+        <ul>
+          <!-- 选中项使用名为active的class -->
+          <li class="active">宝贝</li>
+          <li>天猫</li>
+          <li>店铺</li>
+        </ul>
+      </div>
+
+      <div class="search-bar">
+        <!-- 红色的边框在这个box元素上 -->
+        <div class="box">
+          <!-- 两个图标做在下面两个span上，使用背景图，需要设置宽和高。
+          位置可以使用相对于box的绝对定位来完成 -->
+          <span class="search-icon"></span>
+          <span class="photo-icon"></span>
+          <input type="text" class="search-text" />
+        </div>
+        <input type="button" class="search-btn" value="搜索">
+      </div>
+
+      <!-- 这个面板可相对于search-panel做绝对定位 -->
+      <div class="float-panel">
+        <ul>
+          <li>iphone7手机壳 苹果7plus个性</li>
+          <li>iphone7 plus壳</li>
+          <li>iphone6splus全包手机壳</li>
+          <li>iphone6s手机苹果壳</li>
+          <li>iphone 壳 硅胶</li>
+          <li>ipone6s 手机套 硅胶</li>
+          <li>iphone6s plus手机硅胶壳</li>
+          <li>iphone7 plus手机壳 新款</li>
+          <li>iphone nv 手机壳</li>
+          <li>iphone 6s 手机壳</li>
+        </ul>
+      </div>
+      <!--/float-panel-->
+    </div>
+    <!--search-panel-->
+
 </body>
 
 </html>
