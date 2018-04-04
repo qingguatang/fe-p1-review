@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    li{
+        list-style: none;
+    }
+    body,ul,li{
+        margin:0;
+        padding:0;
+    }
+    .clearfix:after{
+        content:'';
+        display:block;
+        clear: both;
+    }
+
+    .top-nav{
+       /* border: red solid 1px;*/
+        float: left;
+    }
+    .top-nav li {
+       /* border:1px solid blue;*/
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    a{
+        color:white;
+    }
+    
+    .user-status {
+        /*border: 1px solid red;*/
+        float: right;
+    }
+    .user-status li {
+       /* border: 1px solid blue;*/
+        float: left;
+        margin: 0 13px;
+    }
+
+    .top-bar {
+        background: grey;
+    }
+
+    .page-header {
+        width: 1040px;
+        height: 90px;
+        margin-left: auto;/*居中*/
+        margin-right: auto;/*居中*/
+        background:rgb(164, 231, 193);
+        color: white;
+    }
+    .page-header .logo {
+        float: left;
+    }
+    .page-header .main-nav {
+        float: left;
+        margin: auto 15px ;
+        padding-top: 55px;
+    }
+    .page-header .search-bar {
+        float: right;
+        padding-top: 55px;
+    }
+    img{
+        width: 160px;
+        height: 80px;
+    }
+    .air {
+        margin: auto;
+        padding :20px;
+    }
+    span {
+        color:rgb(168, 167, 167);
+    }
+    p {
+        font-size: 22px;
+        width: 25em;
+        margin: auto;
+        padding: 10px;
+    }
+    .article {
+        background: rgb(211, 211, 211);
+        margin: auto;
+        padding-top:5px;
+        width: 650px;
+    }
+    .two {
+        float: left;
+        padding-left: 310px;
+        padding-top: 5px;
+    }
+    .image {
+        width:100px;
+        height: 150px;
+        float: left;
+    }
+    figure {
+        width:100px;
+        margin-left: 300px;
+    }
+    .a {
+        color:grey;
+    }
+    .part {
+        color:rgb(3, 77, 3);
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .title {
+        color:blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="top-bar clearfix">
+            <ul class="top-nav clearfix">
+                    <li>
+                        <a href="#">豆瓣</a>
+                    </li>
+                    <li>
+                        <a href="#">读书</a>
+                    </li>
+                    <li>
+                        <a href="#">电影</a>
+                    </li>
+                    <li>
+                        <a href="#">音乐</a>
+                    </li>
+                    <li>
+                        <a href="#">同城</a>
+                    </li>
+                    <li>
+                        <a href="#">小组</a>
+                    </li>
+                </ul> 
+             
+                <ul class="user-status clearfix">
+                    <li>
+                        <a href="#">下载客户端</a>
+                    </li>
+                    <li>
+                        <a href="#">提醒</a>
+                    </li>
+                    <li>
+                        <a href="#">豆邮</a>
+                    </li>
+                </ul>
+    </div>
+
+    <div class="page-header clearfix">
+        <h1 class="logo"> <img src="D:\Desktop\周素素\images\1S2155218-0.png" alt=""></h1>
+           
+        <div class="main-nav">首页</div>
+        <div class="main-nav">我的豆瓣</div>
+        <div class="main-nav">浏览发现</div>
+        <div class="main-nav">话题广场</div>
+        <div class="search-bar">search bar</div>
+    </div>
+
+    <div class="air clearfix">
+        <img src="D:\Desktop\周素素\images\20150314104940243.jpg" alt="">
+        <span>Sharon的日记</span>
+        <div class="article clearfix">
+            <p>改变世界的环保纪实文学经典《寂静的春天》惊心上市！细腻动人的文字，满溢着对自然与生命的敬畏，勾勒出深邃的人文情怀。蕾切尔·卡森给人类的终极叩问：死寂和万物萌动的春天，你怎么选？</p>
+        </div>
+        <span class="two clearfix">13分钟前，来自热门精选</span>
+    </div>
+
+    <div class="part">
+        <p>
+            豆瓣时间··········（
+            <a href="#" class="title">查看全部</a>
+            ）
+        </p>
+    </div>
+    <figure>
+        <div>
+            <img class="image" src="D:\Desktop\周素素\images\5.webp.jpg" alt="">
+            <a class="a">再谈《战争与和平》：女性人物的美与罪</a>
+        </div>
+    </figure>
+</body>
+</html>
