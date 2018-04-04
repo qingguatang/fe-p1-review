@@ -1,3 +1,6 @@
+/* 注意格式哦，CSS前端有太多空白了 */
+
+
 li {
             list-style: none;
         }
@@ -15,6 +18,11 @@ li {
             line-height: 1.5;
         }
 
+        /* 在课上我使用的是:after， 这个被称为伪类选择器。
+        这里你使用的是::after, 这个被称为伪元素选择器, 即两个冒号的是伪元素选择器，它一般用于生成元素。
+        所以针对目前的场景，伪元素选择器是更合理的，只是这个特性出现得比较晚，所以在IE8上不支持，
+        IE8浏览器只支持单冒号的伪类选择器，所以如果要兼容IE8，那就要使用前者。
+        可以看文档：https://developer.mozilla.org/zh-CN/docs/Web/CSS/::after 了解更多 */
         .clearfix::after {
             content: '';
             display: block;
@@ -39,14 +47,25 @@ li {
         }
 
         .page-header {
-            float: left;
+          /* 这里你使用了float:left, 所以几个导航条都在一行上了 */
+            /* float: left; */
         }
 
         .main1-nav li {
+            /* 你如果使用vscode的话，应该见到这里有这有绿色的波浪线，
+            移上去告诉你display: inline-block用了无效 */
             float: left;
             padding: 0 12px;
+
+            /* 这个inline-block是多余的，float的元素，默认会显示成block特性的
+            看这个文档：https://developer.mozilla.org/zh-CN/docs/CSS/float
+            见： “由于float意味着使用块布局，它在某些情况下修改display 值的计算值：” */
+
             display: inline-block;
             line-height: 28px;
+            /* 这个font-size:12 应该没什么用，
+            因为下一段css中也有大小，写完css要看一下
+            哪些是没必要的 */
             font-size: 12px;
             margin-top: 20px;
         }
@@ -70,11 +89,17 @@ li {
             background: #ef866d;
             color: white;
             font-size: 12px;
+            /* 你在钉钉中说：做这个时，它在border外面，不在里面
+            这是正确的，因为absolute元素，它不占空间，
+            所以不计在border里面，自由自在的。
+            你可以尝试以2倍速看一下绝对定位那两小节，可以帮助你快速复习 */
             position: absolute;
             right: 1px;
-            top: -15px;
+            top: -5px;
             transform: scale(0.6);
             padding: 0 3px;
+            /* 帮你小调整下line-height，这个标会更自然 */
+            line-height: 1.5;
         }
 
         .main1-nav li {
@@ -82,7 +107,8 @@ li {
         }
 
         .icon {
-            float: left;
+          /* 这里应该去掉，否则这个导航布局会不正确 */
+            /* float: left; */
             line-height: 30px;
         }
 
@@ -105,12 +131,15 @@ li {
         }
 
         .icon .talk {
+            /* 现在的图标位置有点不正确，尝试调整后面两个数字，把它移到正确的位置，
+            例如：background: url(images/01.png) no-repeat 0 7px; */
             background: url(images/01.png) no-repeat 0 0;
             background-size: 16px 16px;
             padding-right: 5px;
         }
 
         .icon .picture {
+            /* 这个图标也需要调整下位置  */
             background: url(images/02.png) no-repeat 0 0;
             background-size: 16px 16px;
             padding-right: 5px;
