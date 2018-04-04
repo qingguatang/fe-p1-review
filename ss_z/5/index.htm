@@ -154,8 +154,11 @@
     </div>
 
     <div class="page-header clearfix">
+        <!-- 下面的图片地址，不能是绝对地址，需要相对地址，否则放在别的地方会看不到的，需要改一下 -->
         <h1 class="logo"> <img src="D:\Desktop\周素素\images\1S2155218-0.png" alt=""></h1>
-           
+          
+        <!-- 这四个菜单项，可以放在一个ul中，ul的class名称可以叫 main-nav。
+        像多个样式一样，内容不一样的结构，都可以使用ul来表达。 -->
         <div class="main-nav">首页</div>
         <div class="main-nav">我的豆瓣</div>
         <div class="main-nav">浏览发现</div>
@@ -164,6 +167,7 @@
     </div>
 
     <div class="air clearfix">
+        <!-- 这个图片地址也一样，需要是相对地址 -->
         <img src="D:\Desktop\周素素\images\20150314104940243.jpg" alt="">
         <span>Sharon的日记</span>
         <div class="article clearfix">
@@ -179,9 +183,13 @@
             ）
         </p>
     </div>
+    <!-- 这个figure标签的使用，可以参考：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/figure
+    文档里面的实例，其中的图片说明的文字，可以使用 figcaption 标签，你可以把下面图片的a链接，放到 figcaption 里。 -->
     <figure>
         <div>
+            <!-- 这个图片地址也需要改一下 -->
             <img class="image" src="D:\Desktop\周素素\images\5.webp.jpg" alt="">
+      
             <a class="a">再谈《战争与和平》：女性人物的美与罪</a>
         </div>
     </figure>
