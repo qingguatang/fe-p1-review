@@ -41,7 +41,17 @@
         </style>
 </head>
 <body>
+    <!-- css transform参考得不错，学CSS就是要多多参考，保持哦 -->
+
+    <!-- 活动布局，要添加一个父级节点，因为父级节点要加clearfix。
+    浮动布局有3步：
+    1. 加边框
+    2. 给元素加float: left，或float: right
+    3. 给父元素加clearfix
+  -->
     <div class="polaroid rotate_left">
+        <!-- 图片地址不能使用绝对地址，要使用相对于当前目录的地址，比如
+        images/pulpitrock.jpg， 斜杆使用 / 而不是 \ -->
         <img src="作业6\images\pulpitrock.jpg" alt="" width="284" height="213">
         <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
         </div>
