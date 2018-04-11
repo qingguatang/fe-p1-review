@@ -1,0 +1,225 @@
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main-nav:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.top-bar {
+    width: 300px;
+    background-color: #545652;
+}
+
+.top-bar .main-nav li {
+    /* border: 1px solid red; */
+    float: left;
+}
+
+.top-bar .main-nav li a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #d5d5d5;
+    line-height: 28px;
+    padding: 0 8px;
+}
+
+.top-bar .main-nav li span {
+    text-decoration: none;
+    font-size: 12px;
+    color: #d5d5d5;
+    line-height: 28px;
+    padding: 0 8px;
+}
+
+.top-bar .main-nav li a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.top-bar .main-nav li span:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+/* .popup-demo {
+    .user-status {
+      border: 1px solid orange;
+      position: relative;
+      width: 140px;
+  
+      .title {
+        cursor: pointer;
+      }
+  
+      .panel {
+        display: none;
+        position: absolute;
+        width: 140px;
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        margin-top: 10px;
+  
+        li {
+          margin: 10px 10px;
+        }
+  
+        z-index: 1;
+      }
+  
+      .unpopup-icon {
+        display: none;
+      }
+  
+      &.active {
+        .popup-icon {
+          display: none;
+        }
+        .unpopup-icon {
+          display: inline-block;
+        }
+        .panel {
+          display: block;
+        }
+      }
+    }
+  } */
+
+.page-header {
+    width: 675px;
+    background-color: white;
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+.page-header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.page-header .main1-nav li {
+    /*   border: 1px solid red; */
+    float: left;
+    font-size: 14px;
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 22px;
+    margin-right: 18px;
+}
+
+.page-header .main1-nav li a {
+    text-decoration: none;
+    color: #669;
+}
+
+.page-header .main1-nav li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #37a;
+}
+
+.page-header .main1-nav li .icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: -26px;
+    /* border: 1px solid red; */
+}
+
+.page-header .main2-nav li {
+    /*   border: 1px solid red; */
+    float: right;
+    font-size: 14px;
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 22px;
+    margin-right: 18px;
+}
+
+.page-header .main2-nav li a {
+    text-decoration: none;
+    color: #999;
+}
+
+.page-header .main2-nav li .icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: -28px -25px;
+    /* border: 1px solid red; */
+}
+
+.page-header .main1-nav .icon {
+    background: url(images/00.png) no-repeat 0 0;
+    background-size: 24px auto;
+}
+
+.page-header .talk .icon {
+    background-position: 0 0;
+}
+
+.page-header .picture .icon {
+    background-position: 0 -30px;
+}
+
+.page-header .web .icon {
+    background-position: 0 -62px;
+}
+
+.page-header .note .icon {
+    background-position: 0 -94px;
+}
+
+.page-header .main2-nav .icon {
+    background: url(images/00.png) no-repeat 0 -128px;
+    background-size: 24px auto;
+}
+
+.search-bar input {
+    width: 675px;
+    margin-top: 2px;
+}
+
+.bottom-bar {
+    width: 446.38px;
+}
+
+.bottom-bar:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bottom-bar li {
+    float: right;
+    padding-left: 1px;
+    margin-right: 5px;
+    margin-top: 10px;
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 2em;
+}
+
+.bottom-bar li a {
+    text-decoration: none;
+    color: #37a;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.bottom-bar li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #37a;
+}
