@@ -16,6 +16,7 @@ ul, li {
     clear: both;
 }
 
+/* 这个导航条的布局做得很标准 */
 .top-bar {
     width: 300px;
     background-color: #545652;
@@ -108,11 +109,23 @@ ul, li {
     clear: both;
 }
 
+/* 我看你的结构，应该是这样的意图：
+main1-nav应该在左边，所以使用float:left，现在没有设置float:left
+
+main2-nav应该在右边，所以使用float:right
+而现在你把float:right设置在里面的li上了，这里有点不对。
+
+可以给main1-nav和main2-nav加上边框来看看效果。 */
+
+
+/* 因为现在li设置为float left的，
+所以需要在父级元素 .main1-nav上清除浮动， */
 .page-header .main1-nav li {
     /*   border: 1px solid red; */
     float: left;
     font-size: 14px;
     font-size: 14px;
+    /* 下面这句话不需要的，inline-block不和float-left共用 */
     display: inline-block;
     padding-left: 22px;
     margin-right: 18px;
@@ -142,6 +155,7 @@ ul, li {
     float: right;
     font-size: 14px;
     font-size: 14px;
+    /* 这个inline-bock是不需要的 */
     display: inline-block;
     padding-left: 22px;
     margin-right: 18px;
@@ -160,6 +174,7 @@ ul, li {
     /* border: 1px solid red; */
 }
 
+/* CSS Sprites做得挺好的 */
 .page-header .main1-nav .icon {
     background: url(images/00.png) no-repeat 0 0;
     background-size: 24px auto;
@@ -191,6 +206,7 @@ ul, li {
     margin-top: 2px;
 }
 
+/* 这个条的布局需要重新做一下，折行是因为设置了宽度。 */
 .bottom-bar {
     width: 446.38px;
 }
@@ -202,6 +218,7 @@ ul, li {
 }
 
 .bottom-bar li {
+    /* 这个为什么要float: right呢？ */
     float: right;
     padding-left: 1px;
     margin-right: 5px;
