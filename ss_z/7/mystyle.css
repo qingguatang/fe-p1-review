@@ -1,0 +1,151 @@
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+bodu,ul,li {
+    margin: 0;
+    padding: 0;
+}
+/*导航部分的样式*/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.top-bar {
+    height: 28px;
+    background-color: rgb(39, 39, 39);
+}
+.top-nav li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 6px;
+}
+.top-bar a {
+    color: white;
+}
+.user-status li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 6px;
+}
+.top-nav {
+    float: left;
+    font-size: 15px;
+}
+.user-status {
+    float: right;
+    font-size: 15px;
+}
+.page {
+    height: 75px;
+    background-color: rgb(186, 238, 212);
+}
+.page-header {
+    width: 1040px;
+    margin: 0 auto;
+}
+.page-header .main-nav {
+    float: left;
+    width: 600px;
+    height: 56px;
+    position: relative;
+    top: 9px;
+}
+.page-header .main-nav a{
+    font-weight: bold;
+    color: green;
+}
+.page-header .search-bar {
+    float: right;
+    padding-top:15px; 
+    position: relative;
+    top: 6px;
+}
+.page-header .main-nav li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 15px;
+    position: relative;
+}
+.page-header .main-nav img {
+    width: 160px;
+    height: 60px;
+    float: left;
+}
+.main-nav .new {
+    background-color: #ef866d;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top:3px;
+    left: 65px;
+}
+.top-bar .menu {
+    width: 110px;
+    position: relative;
+}
+.top-bar .menu .items {
+    position: absolute;
+    top: 30px;
+    border: 1px solid #e5e6e6;
+    background: #fff;
+}
+.top-bar .menu .items li {
+    padding: 5px 10px 5px 10px;
+}
+/*内容的样式布局*/
+.first {
+    border: sandybrown solid 1px;
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 25px; 
+}
+.tabs li {
+    float: left;
+    margin-right: 22px;
+}
+.tabs li a {
+    color: #37a;
+    font-size: 14px;
+}
+.tabs li a:hover {
+    background: #37a;
+    color: #fff;
+}
+.tabs span {
+    border: salmon solid 1px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(D:\Desktop\作业7\images\css_sprites.png)
+}
+/*底部导航的样式布局*/
+.base-bar {
+    clear: both;
+    width: 800px;
+    height: 80px;
+    margin: 0 auto;
+    border: bisque solid 1px;
+}
+.foot-nav li {
+    float: left;
+    margin: 0 10px;
+    position: relative;
+}
+.foot-nav li::after {
+    width: 5px;
+    height: 5px;
+    display: block;
+    content: '';
+    background: #000;
+    position: absolute;
+    right: -13px;
+    top: 7px;
+}
+.foot-nav li:last-child::after {
+    display: none;
+}
