@@ -4,7 +4,7 @@ li {
 a {
     text-decoration: none;
 }
-bodu,ul,li {
+body,ul,li {
     margin: 0;
     padding: 0;
 }
@@ -121,7 +121,8 @@ bodu,ul,li {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background: url(D:\Desktop\作业7\images\css_sprites.png)
+    background: url(./images/css_sprites.png);
+    background-size: 32px;
 }
 /*底部导航的样式布局*/
 .base-bar {
