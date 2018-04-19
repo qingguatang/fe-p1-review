@@ -1,0 +1,200 @@
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body,ul,li {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 635082 */
+    src: url('//at.alicdn.com/t/font_635082_x5q993x6tzbk2o6r.eot');
+    src: url('//at.alicdn.com/t/font_635082_x5q993x6tzbk2o6r.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_635082_x5q993x6tzbk2o6r.woff') format('woff'),
+    url('//at.alicdn.com/t/font_635082_x5q993x6tzbk2o6r.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_635082_x5q993x6tzbk2o6r.svg#iconfont') format('svg');
+  }
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+/*导航部分的样式*/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.top-bar {
+    height: 28px;
+    background-color: rgb(39, 39, 39);
+}
+.top-nav li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 6px;
+}
+.top-bar a {
+    color: white;
+}
+.user-status li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 6px;
+}
+.top-nav {
+    float: left;
+    font-size: 15px;
+}
+.user-status {
+    float: right;
+    font-size: 15px;
+}
+.page {
+    height: 75px;
+    background-color: rgb(186, 238, 212);
+}
+.page-header {
+    width: 1040px;
+    margin: 0 auto;
+}
+.page-header .main-nav {
+    float: left;
+    width: 600px;
+    height: 56px;
+    position: relative;
+    top: 9px;
+}
+.page-header .main-nav a{
+    font-weight: bold;
+    color: green;
+}
+.page-header .search-bar {
+    float: right;
+    padding-top:15px; 
+    position: relative;
+    top: 6px;
+}
+.page-header .main-nav li {
+    float: left;
+    margin: 0 13px;
+    padding-top: 15px;
+    position: relative;
+}
+.page-header .main-nav img {
+    width: 160px;
+    height: 60px;
+    float: left;
+}
+.main-nav .new {
+    background-color: #ef866d;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top:3px;
+    left: 65px;
+}
+.top-bar .menu {
+    width: 110px;
+    position: relative;
+}
+.menu .items {
+    display: none;
+}
+.menu:active .items {
+    display: block;
+}
+i {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    color: #fff;
+}
+.top-bar .menu .items {
+    position: absolute;
+    top: 30px;
+    border: 1px solid #e5e6e6;
+    background: #fff;
+}
+.top-bar .menu .items li {
+    padding: 5px 10px 5px 10px;
+}
+/*内容的样式布局*/
+.first {
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 35px; 
+}
+.tabs li {
+    float: left;
+    margin: 0 22px;
+    position: relative;
+}
+.tabs li a {
+    color: #37a;
+    font-size: 14px;
+}
+.tabs li a:hover {
+    background: #37a;
+    color: #fff;
+}
+.tabs span {
+    position: absolute;
+    left: -23px;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(images/css_sprites.png) no-repeat -3px -3px;
+    background-size: 25px 125px;
+}
+.write {
+    width: 790px;
+    height: 30px;
+    margin-top: 10px;
+    border: rgb(167, 165, 165) 3px solid;
+}
+.tabs .talk .icon {
+    background-position: -3px -53px;
+}
+.tabs .photo .icon {
+    background-position: -3px -103px;
+}
+.tabs .web-page .icon {
+    background-position: -3px -28px;
+}
+.tabs .diary .icon {
+    background-position: -3px -78px;
+}
+/*底部导航的样式布局*/
+.base-bar {
+    clear: both;
+    width: 800px;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: 395px;
+}
+.foot-nav li {
+    float: left;
+    margin: 0 10px;
+    position: relative;
+    color: rgb(67, 67, 136);
+}
+.foot-nav li::after {
+    width: 5px;
+    height: 5px;
+    display: block;
+    content: '';
+    background: rgb(84, 71, 160);
+    position: absolute;
+    right: -13px;
+    top: 7px;
+}
+.foot-nav li:last-child::after {
+    display: none;
+}
