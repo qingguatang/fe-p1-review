@@ -73,6 +73,11 @@
             <div class="page-header clearfix">
                 <div class="main-nav clearfix">
                     <img src="images/1S2155218-0.png" alt="" class="logo">
+                    <!-- 总体布局基本上没问题了，有些细节需要处理
+                    比如这个ul，你如果给它加border的话，会发现它没有高度。
+                    1. 因为里面的元素是float-left的，所以它需要加clearfix
+                    2. main-nav里面共有两个元素，要求水平布局， logo和 name， logo现在是float 因为里面的元素是float-left的，所以它需要加clearfix
+                      但是name还没做好。 -->
                     <ul class="name">
                         <li>
                              <a href="#">首页</a>

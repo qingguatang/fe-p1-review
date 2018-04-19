@@ -29,9 +29,13 @@ body,ul,li {
     clear: both;
 }
 .top-bar {
-    height: 28px;
-    background-color: rgb(39, 39, 39);
+  /* 咱们在css中尽量不设置高度，你可以复习这一小节：https://www.qingguatang.com/preview/task?id=50587769570852864&index=0
+  你看现在的效果呢，它其他没有居中， 可以尝试里面的链接设置 line-height 来达到高度，同时让文字剧中的目的 */
+  height: 28px;
+  background-color: rgb(39, 39, 39);
 }
+
+/* 现在布局做正确了，很棒 */
 .top-nav li {
     float: left;
     margin: 0 13px;
@@ -40,6 +44,8 @@ body,ul,li {
 .top-bar a {
     color: white;
 }
+
+/* 这里面文字的上下居中，我们也可以使用line-height。 */
 .user-status li {
     float: left;
     margin: 0 13px;
@@ -54,6 +60,7 @@ body,ul,li {
     font-size: 15px;
 }
 .page {
+    /* 尝试使用padding来把高度撑起来，不要直接设置高度 */
     height: 75px;
     background-color: rgb(186, 238, 212);
 }
@@ -64,7 +71,10 @@ body,ul,li {
 .page-header .main-nav {
     float: left;
     width: 600px;
+    /* 这里的高度也一样，尝试使用padding撑出高度 */
     height: 56px;
+
+    /* 请使用margin或padding来调整，不使用position:relative来调整 */
     position: relative;
     top: 9px;
 }
@@ -75,6 +85,9 @@ body,ul,li {
 .page-header .search-bar {
     float: right;
     padding-top:15px; 
+    /* 这个position:reltive应该不需要的
+    我们也没有讲过在position relative元素上设置left 和top
+    它只是用于给里面的absolute元素作参考用 */
     position: relative;
     top: 6px;
 }
@@ -143,6 +156,8 @@ i {
     color: #fff;
 }
 .tabs span {
+    /* 这个icon的居中，你可以使用vertical-align: middle来完成
+    我们只在浮层，或者说元素不能占空间的场景下使用absolute，其他场景都不使用 */
     position: absolute;
     left: -23px;
     top: 1px;
@@ -172,10 +187,15 @@ i {
 }
 /*底部导航的样式布局*/
 .base-bar {
+    /* 这个clear属性应该没有用，不要写没有用的样式 */
     clear: both;
     width: 800px;
+    /* 使用line-height来完成 */
     height: 20px;
     margin: 0 auto;
+    
+    /* 下面这个可直接使用margin-top来完成 */
+    /* 一般来说，当你写position:relative，再设置top 或 left，这个代码就是有问题的 */
     position: relative;
     top: 395px;
 }
@@ -185,6 +205,7 @@ i {
     position: relative;
     color: rgb(67, 67, 136);
 }
+/* 底部的中间的点的装饰做得不错 */
 .foot-nav li::after {
     width: 5px;
     height: 5px;
